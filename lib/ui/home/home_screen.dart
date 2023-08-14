@@ -1,6 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:helasy_tash1/ui/faram/avater_other.dart';
+import 'package:helasy_tash1/ui/faram/location_select.dart';
+import 'package:helasy_tash1/ui/home/location_bady.dart';
 import 'package:helasy_tash1/ui/home/page_everyone.dart';
 
 import '../faram/coustom_other.dart';
@@ -44,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         Image.asset(
@@ -55,8 +57,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-            child: GestureDetector(
-              onTap: () {},
+            child:
+            GestureDetector(
+              onTap: () {Navigator.pushNamed(context,
+                  LocationBady.routeName,);},
               child: Column(children: [
                 Row(children: [
                   Image.asset(
@@ -75,20 +79,33 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 15, fontWeight: FontWeight.bold),
                         ),
                         Container(
-                            height: 27,
-                            width: 129,
+                            // height: 27,
+                            // width: 129,
                             decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(10),
+                                color: const Color(0xff548CFF),
+                                borderRadius: BorderRadius.circular(18)),
+                            // decoration: BoxDecoration(
+                            //   color: Colors.blue,
+                            //   borderRadius: BorderRadius.circular(10),
+                            // ),
+                          child: const Center(
+                            child: Text(
+                              ' تحديد الموقع الحالي ',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
                             ),
-                            child: const Center(
-                              child: Text(
-                                '    تحديد الموقع الحالي   ',
-                                style: TextStyle(fontSize: 11),
-                              ),
-                            )),
-                        const SizedBox(
-                          height: 20,
+                          ),
+                            // child: const Center(
+                            //   child: Text(
+                            //     '    تحديد الموقع الحالي   ',
+                            //     style: TextStyle(fontSize: 11),
+                            //   ),
+                            // ),
+                        ),
+                         const SizedBox(
+                          height: 50,
                         ),
                       ],
                     ),
@@ -103,15 +120,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             hintStyle: const TextStyle(
                               color: Color.fromRGBO(144, 144, 144, 1),
                             ),
-                            fillColor: Color.fromRGBO(244, 247, 251, 1),
+                            fillColor: const Color.fromRGBO(244, 247, 251, 1),
                             filled: true,
                             border: InputBorder.none,
                             enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.white),
+                                borderSide: const BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(100)),
                             hintText: 'ابحث عن اقرب مستشفي ',
                             hintTextDirection: TextDirection.rtl,
-                            prefixIcon: Icon(Icons.search)),
+                            prefixIcon: const Icon(Icons.search)),
                       ),
                       // child: TextField(
                       //   decoration: InputDecoration(
@@ -155,7 +172,8 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 CoustomOther(
                   text: 'اخري  ',
-                  onTap: () {},
+                  onTap: () {Navigator.pushNamed(context,
+                      LocationSelect.routeName);},
                 ),
                 const SizedBox(
                   width: 5,
@@ -166,7 +184,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 CoustomOther(
                   text: 'مستشفيات  ',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, LocationSelect.routeName);},
                 ),
                 const SizedBox(
                   width: 5,
@@ -177,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 CoustomOther(
                   text: 'القلب ',
-                  onTap: () {},
+                  onTap: () {Navigator.pushNamed(context, LocationSelect.routeName);},
                 ),
                 const SizedBox(
                   width: 5,
@@ -188,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 CoustomOther(
                   text: 'العيون  ',
-                  onTap: () {},
+                  onTap: () {Navigator.pushNamed(context, LocationSelect.routeName);},
                 ),
                 const SizedBox(
                   width: 5,
@@ -199,7 +218,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 CoustomOther(
                   text: 'مخ ',
-                  onTap: () {},
+                  onTap: () {Navigator.pushNamed(context, LocationSelect.routeName);},
                 ),
                 const SizedBox(
                   width: 5,
@@ -210,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 CoustomOther(
                   text: 'الكل ',
-                  onTap: () {},
+                  onTap: () {Navigator.pushNamed(context,LocationBady.routeName);},
                 ),
                 const SizedBox(
                   width: 5,
@@ -266,7 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             ],
           ),
-        )
+        ),
 
         // Expanded(
         //   flex: 1,

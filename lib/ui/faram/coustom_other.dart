@@ -14,16 +14,16 @@ class CoustomOther extends StatelessWidget {
       onTap: onTap,
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Container(
             height: 40,
-            child: VerticalDivider(
+            child: const VerticalDivider(
               color: Colors.grey,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Container(

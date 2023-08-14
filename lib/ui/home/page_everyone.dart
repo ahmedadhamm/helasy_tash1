@@ -24,8 +24,7 @@ class _HomePageState extends State<Page_Everyone> {
   void selectContainerTwo(int index) {
     setState(() {
       if (selectedIndexTwo != index) {
-        selectedIndexTwo =
-            -1;
+        selectedIndexTwo = -1;
       } else {
         selectedIndexTwo = index;
       }
@@ -34,57 +33,58 @@ class _HomePageState extends State<Page_Everyone> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(scrollDirection: Axis.horizontal,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          FaramEveryone(
-          //  width: 150,
+          FaramEveryone(selectedNumber: 0,
+            //  width: 150,
             text: 'مراكز اشعة',
             imagePath: 'assets/images/مراكز الاشعات.png',
-            onTap: () => selectContainerOne(3),
-            isSelected: selectedIndexOne == 3,
+            onTap: () => selectContainerOne(7),
+            isSelected: selectedIndexOne == 7,
           ),
-          FaramEveryone(
-           // width: 120,
+          FaramEveryone(selectedNumber: 1,
+            // width: 120,
             text: 'مراكز اسنان',
             imagePath: 'assets/images/الاسنان.png',
             onTap: () => selectContainerOne(6),
             isSelected: selectedIndexOne == 6,
           ),
-          FaramEveryone(
-           // width: 150,
+          FaramEveryone(selectedNumber: 2,
+            // width: 150,
             text: 'استشارة عن بعد',
             imagePath: 'assets/images/الاستشتاره.png',
             onTap: () => selectContainerOne(5),
             isSelected: selectedIndexOne == 5,
           ),
-          FaramEveryone(
-           // width: 150,
+          FaramEveryone(selectedNumber: 3,
+            // width: 150,
             text: 'خدمات رعاية منزلية',
             imagePath: 'assets/images/الاسنان.png',
             onTap: () => selectContainerOne(4),
             isSelected: selectedIndexOne == 4,
           ),
-          FaramEveryone(
-          //  width: 100,
+          FaramEveryone(selectedNumber: 4,
+            //  width: 100,
             text: 'مختبارات',
             imagePath: 'assets/images/رعايه منزل.png',
             onTap: () => selectContainerOne(3),
             isSelected: selectedIndexOne == 3,
           ),
-          FaramEveryone(
+          FaramEveryone(selectedNumber: 5,
             text: 'مستشفيات',
             imagePath: 'assets/images/Group 906.png',
             onTap: () => selectContainerOne(2),
             isSelected: selectedIndexOne == 2,
           ),
-          FaramEveryone(
+          FaramEveryone(selectedNumber: 6,
             text: 'اطباء',
             imagePath: 'assets/images/الاسنان.png',
             onTap: () => selectContainerOne(1),
             isSelected: selectedIndexOne == 1,
           ),
-          FaramEveryone(
+          FaramEveryone(selectedNumber: 7,
             text: 'الكل',
             onTap: () => selectContainerOne(0),
             isSelected: selectedIndexOne == 0,

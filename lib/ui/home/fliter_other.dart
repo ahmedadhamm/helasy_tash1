@@ -19,7 +19,7 @@ class FilterOther extends StatelessWidget{
             width: 5,
           ),
           CoustomOtherTwo(),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           CoustomOther(text: 'مستشفيات  ', onTap: () {  },),
